@@ -10,7 +10,7 @@ description: All the deets for The XYZ Podcast
 external-image: false
 picture: assets/images/xyz-logo.jpg
 
-url: https://harryf.github.io/thexyzpodcast/
+url: https://harryf.github.io/thexyzpodcast
 permalink: /:title/
 
 # To enable google analytics, supply your token below
