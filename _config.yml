@@ -1,0 +1,95 @@
+# main text of home
+name: The XYZ Podcast 
+bio: Three Zurich based comedians discuss stuff. Some of it is offensive. Some of it is funny. None of it matters.
+
+# twitter summary info
+description: All the deets for The XYZ Podcast
+
+# if it's an external image, update below for true
+# better with square images
+external-image: false
+picture: assets/images/xyz-logo.jpg
+
+url: https://www.thexyzpodcast.com
+permalink: /:title/
+
+# To enable google analytics, supply your token below
+# analytics-google: 'UA-MYANALYTICS'
+
+# To enable piwik tracking, supply your url & site ID below
+# analytics-piwik-url: 'piwik.my-host.com'
+# analytics-piwik-id: 1
+
+# if you don't have any of social below, comment the line
+facebook: thexyzpodcast
+# twitter:
+instagram: thexyzpodcast
+# pinterest:
+# linkedin: johndoe
+youtube: https://www.youtube.com/channel/UCA9JNCYEuuA01BqnG3HWjNA
+spotify: https://open.spotify.com/show/3j2oovdoty9hf0TI67ZYb1
+apple: https://podcasts.apple.com/us/podcast/the-xyz-podcast/id1515002956
+# github: johndoe
+# gitlab: 
+# lastfm: 
+# stackoverflow: 
+# quora: 
+# reddit: 
+# medium: 
+# vimeo: myvimeo
+# lanyrd: mylanyrd
+email: thexyzpod@gmail.com
+
+# do you want a larger site? change the option below
+# options: [normal, large] | default: normal
+# normal = 560px / large = 810px
+width: normal
+
+# if you do/don't need pagination, toggle 'enabled' between true/false below
+pagination:
+  enabled: false
+  sort_reverse: true # display recent posts first
+  title: ":title" # Changing this will mess up the header display logic
+  per_page: 5
+  permalink: "/:num/" # pagination link that will be appended
+
+# if you don't need projects, comment the *projects* configs below
+#projects: true
+
+# if you don't need "about" or "blog", comment them out below
+about: false
+blog: false
+
+# If you want to include your resume, set to true
+# and specify source (external or local).
+resume: false
+#resume-external: true
+#resume-url: https://google.com/?q=my+resume
+
+# do you want some animations?
+animation: true
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-gist
+  - jemoji
+
+jekyll-mentions:
+  base_url: https://github.com
+
+compress_html:
+  ignore:
+    envs:
+      - development
+      - stage
+
+exclude:
+  [
+    "travis.sh",
+    "README.md",
+    "Gemfile",
+    "Gemfile.lock",
+    "FAQ.md",
+    "node_modules",
+    "vendor",
+  ]
