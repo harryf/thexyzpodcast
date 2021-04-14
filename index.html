@@ -2,13 +2,21 @@
 layout: page
 title: Where to Find The XYZ Podcast
 ---
+
 <div class="main">
-  {% for post in site.posts %}
+  {% assign links = site.posts | where:'group', 'link' %}
+  {% for post in links %}
 
   <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>' }}" class="button" target="_blank">{{ post.title }}</a>
 
   {% endfor %}
+
+  {% assign extras = site.posts | where:'group', 'extra' %}
+  {% for extra in extras %}
+  <div class="post">
+    <h2 class="title">{{ extra.title }}</h2>
+    {{ extra.content }}
+  </div>
+  {% endfor %}
 </div>
-
-
             
