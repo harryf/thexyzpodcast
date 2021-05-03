@@ -10,6 +10,16 @@
         {% endif %}
 
         <h1 class="title">{{ site.name }}</h1>
+
+        <div class="main">
+        {% assign links = site.posts | where:'group', 'action' %}
+        {% for post in links %}
+      
+        <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>' }}" class="action" target="_blank">{{ post.title }}</a>
+      
+        {% endfor %}
+        </div>
+
         <h2 class="description">{{ site.bio }}</h2>
 
         {% include social-links.html %}
