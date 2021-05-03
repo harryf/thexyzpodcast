@@ -4,6 +4,13 @@ title: Where to Find The XYZ Podcast
 ---
 
 <div class="main">
+  {% assign links = site.posts | where:'group', 'action' %}
+  {% for post in links %}
+
+  <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>' }}" class="action" target="_blank">{{ post.title }}</a>
+
+  {% endfor %}
+
   {% assign links = site.posts | where:'group', 'link' %}
   {% for post in links %}
 
