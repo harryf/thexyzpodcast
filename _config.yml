@@ -8,7 +8,8 @@ description: All the deets for The XYZ Podcast
 # if it's an external image, update below for true
 # better with square images
 external-image: false
-picture: assets/images/xyz-logo.jpg
+# picture: assets/images/xyz-logo.jpg
+picture: assets/images/live-show-may21-2021.jpg
 
 url: https://thexyzpod.com
 permalink: /:title/
