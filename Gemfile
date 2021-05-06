@@ -8,3 +8,7 @@ group :jekyll_plugins do
     gem "html-proofer"
 end
 
+gem "rexml", ">= 3.2.5"
+gem "kramdown", ">= 2.3.1"
+gem "nokogiri", ">= 1.11.0"
+
