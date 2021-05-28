@@ -96,3 +96,8 @@ exclude:
     "node_modules",
     "vendor",
   ]
+
+collections:
+  episodes:
+    output: true
+    permalink: /episodes/:path.html

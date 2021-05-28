@@ -1,0 +1,21 @@
+---
+layout: episodes
+title: Comedy and Stand-Up
+---
+
+<div class="main">
+  {% assign episodes = site.episodes | where:'categories', 'comedy' %}
+
+  <ul class="episodes">
+  {% for episode in episodes reversed %}
+    <li>
+      <a href="{{ site.url }}{{ episode.url }}">
+        <img class="selfie" src="{{ episode.image }}"/>
+        <h2><span>{{ episode.title }}</span></h2>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+
+</div>
+            

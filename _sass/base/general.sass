@@ -17,6 +17,10 @@ h1
 	color: $beta
 	font-weight: 700
 
+h1 > a
+	text-decoration: none
+	color: $beta
+
 h2
 	font-size: 2.2rem
 
@@ -181,3 +185,48 @@ pre
 
 .wrapper-large
 	max-width: 810px
+
+.episodes
+	list-style-type: none
+	text-align: center
+	margin: 0
+	padding: 0
+
+	> li
+		display: inline
+		font-size: 1.4rem
+
+	> li > a
+		text-align: center
+		padding: 5px
+		margin: 5px
+		text-decoration: none
+	
+	> li > a:hover
+		text-decoration: underline
+
+	> li > a > img
+		width: 225px
+		height: 225px
+		border-radius: 25%
+		transition: all .1s
+		opacity: 1
+		position: relative
+
+		&:hover
+			box-shadow: 0 0px 4px 0 rgba(0,0,0,0.18), 0 0px 12px 0 rgba(0,0,0,0.15)
+			opacity: .8
+			background-color: #fa93a7
+	
+	> .description
+		font-size: 1.85rem
+		font-weight: 300
+		font-style: normal
+		color: $gama
+		width: 70%
+		margin: 30px
+		padding: 30px
+
+		// if you put some links in your bio. ;)
+		a
+			font-weight: 200

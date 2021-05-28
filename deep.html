@@ -1,0 +1,21 @@
+---
+layout: episodes
+title: Deep Shit
+---
+
+<div class="main">
+  {% assign episodes = site.episodes | where:'categories', 'deep' %}
+
+  <ul class="episodes">
+  {% for episode in episodes reversed %}
+    <li>
+      <a href="{{ site.url }}{{ episode.url }}">
+        <img class="selfie" src="{{ episode.image }}"/>
+        <h2><span>{{ episode.title }}</span></h2>
+      </a>
+    </li>
+  {% endfor %}
+  </ul>
+
+</div>
+            

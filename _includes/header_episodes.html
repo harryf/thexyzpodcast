@@ -1,0 +1,17 @@
+    <header class="header-home {% if site.animation %}animated{% endif %}">
+        {% if page.image %}
+        <a class="link" href="{{ page.link }}">
+            <img class="selfie small" alt="{{ page.title }}" src="{{ page.image }}" />
+        </a>
+        {% else %}
+        <a class="link" href="{{ site.url }}">
+            <img class="selfie small" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
+        </a>
+        {% endif %}
+
+        
+        <h1 class="title"><a class="link" href="{{ site.url }}">{{ site.name }}</a></h1>
+
+        <h2>{{ page.title }}</h2>
+
+    </header>
