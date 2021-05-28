@@ -314,6 +314,7 @@ DEPENDENCIES
   html-proofer
   jekyll-gist
   jekyll-seo-tag
+  jekyll-sitemap
   jemoji
   kramdown (>= 2.3.1)
   nokogiri (>= 1.11.0)
