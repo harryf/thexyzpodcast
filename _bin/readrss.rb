@@ -10,6 +10,7 @@ feed_url = "https://feed.podbean.com/thexyzpod/feed.xml"
 root_dir = Dir.pwd
 data_dir = File.join(root_dir,'_data')
 episode_dir = File.join(root_dir,'_episodes')
+post_dir = File.join(root_dir,'_posts')
 extra_dir = File.join(root_dir,'_extra')
 json_file = File.join(data_dir,'metadata.json')
 
@@ -117,6 +118,7 @@ if options[:pages]
 
     URI.open(feed_url) do |rss|
         feed = RSS::Parser.parse(rss)
+        first = true
         feed.items.each do |item|
             date = "%s-%s-%s" % [item.pubDate.year,padded(item.pubDate.month),padded(item.pubDate.day)]
             time = "%s:%s" % [padded(item.pubDate.hour),padded(item.pubDate.min)]
@@ -166,6 +168,28 @@ PAGE
             File.open(File.join(episode_dir,filename),"w") {
                 |file| file.write(page)
             }
+
+            # Update the "Latest" button to the new episode...
+            if first
+                # update latest
+                latest = <<-LATEST
+---
+layout: post
+date: 2020-08-24 22:48
+title: Latest Episode
+group: action
+type: internal
+sitemap: false
+---
+
+{{ site.url }}/episodes/#{filename}
+                
+LATEST
+                File.open(File.join(post_dir,"2021-03-16-LATEST.md"),"w") {
+                    |file| file.write(latest)
+                }
+                first = false
+            end
         end
     end
 end
