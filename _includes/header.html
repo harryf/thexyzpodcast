@@ -18,8 +18,16 @@
         <div class="main">
         {% assign links = site.posts | where:'group', 'action' %}
         {% for post in links %}
+
+        {% if post.type == "internal" %}
       
+        <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>' }}" class="action">{{ post.title }}</a>
+
+        {% else %}
+
         <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>' }}" class="action" target="_blank">{{ post.title }}</a>
+
+        {% endif %}
       
         {% endfor %}
         </div>
