@@ -1,6 +1,14 @@
+{% assign display_home = true %}
+{% if page.path == "index.html" %}
+{%  assign display_home = false %}
+{% endif %}
+{% if page.path == "_posts/2021-02-10-Explore.html" %}
+{%  assign display_home = false %}
+{% endif %}
+
 <div class="explore">
     <ul>
-        {% if include.home != "hide" %}
+        {% if display_home == true %}
         <li>
             <a href="{{ site.url }}">Home</a>
         </li>
@@ -23,7 +31,7 @@
         <li>
             <a href="{{ site.url }}/oversharing/">Oversharing</a>
         </li>
-        {% if include.home != "hide" %}
+        {% if display_home == true %}
         <li>
             <a href="{{ site.url }}/all/">All</a>
         </li>
