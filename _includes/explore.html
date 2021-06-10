@@ -1,0 +1,36 @@
+<div class="explore">
+    <ul>
+        {% if include.home != "hide" %}
+        <li>
+            <a href="{{ site.url }}">Home</a>
+        </li>
+        {% endif %}
+        <li>
+            <a href="{{ site.url }}/comedy/">Comedy</a>
+        </li>
+        <li>
+            <a href="{{ site.url }}/guests/">Guests</a>
+        </li>
+        <li>
+            <a href="{{ site.url }}/switzerland/">Switzerland</a>
+        </li>
+        <li>
+            <a href="{{ site.url }}/dating/">Dating</a>
+        </li>
+        <li>
+            <a href="{{ site.url }}/deep/">Deep</a>
+        </li>
+        <li>
+            <a href="{{ site.url }}/oversharing/">Oversharing</a>
+        </li>
+        {% if include.home != "hide" %}
+        <li>
+            <a href="{{ site.url }}/all/">All</a>
+        </li>
+        {% else %}
+        <li>
+            <a href="{{ site.url }}/all/">All Episodes</a>
+        </li>
+        {% endif %}
+    </ul>
+</div>
