@@ -28,5 +28,28 @@ youtube:
     <p>
     Nick is an Australian comedian who can be heard on his two podcasts <a href="https://omny.fm/shows/the-phone-hacks/playlists/podcast">The Phone Hacks Podcast</a> and <a href="https://flatstick69.podbean.com/">Flat Stick Podcast</a>. Find out more about Nick at <a href="http://www.nickcapper.com/">http://www.nickcapper.com/</a>.
 </p>
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
 </div>
 

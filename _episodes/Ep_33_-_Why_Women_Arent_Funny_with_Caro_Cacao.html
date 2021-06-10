@@ -28,5 +28,28 @@ youtube:
     <p>Caro organises Spanish Stand-up comedy events in Switzerland at <a href="https://www.cacaocomedy.ch/">https://www.cacaocomedy.ch/</a>. See Caro's Swiss SRF 3 «Comedy Talent Stage» enty below. Catch up with Caro Cacao (aka Caro Knaack) on <a href="https://www.instagram.com/_knaaaack_/">Instagram</a> or <a href="https://www.facebook.com/caroline.knaack">Facebook</a></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/m7gG6wH7DiU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
 </div>
 
