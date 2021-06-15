@@ -133,6 +133,8 @@ if options[:pages]
             end
             # puts extra
 
+            description = item.description.gsub(/<p>More about.*<\/a><\/p>/,'')
+
             page = <<-PAGE
 ---
 layout: episodes
@@ -146,7 +148,7 @@ apple: #{data[item.link]['apple']}
 youtube: #{data[item.link]['youtube']}
 ---
 <div class="episodes>
-    <span class="description">#{item.description}</span>
+    <span class="description">#{description}</span>
 
     {% if page.spotify %}
     <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
