@@ -74,7 +74,7 @@ if options[:json]
             categories.push('dating') unless categories.include? 'dating'
         end
 
-        if item.title.match(/(conspiracy|apocalypse|religion|social media|future|reboot|burnout|life|death|woke|addiction|gamestop|toilet|vaccine|idolize|revolution|positivity|19 years)/i)
+        if item.title.match(/(conspiracy|apocalypse|religion|social media|future|reboot|burnout|life|death|woke|addiction|gamestop|toilet|vaccine|idolize|revolution|positivity|19 years|yoga|meditate)/i)
             categories.push('deep') unless categories.include? 'deep'
         end
 
