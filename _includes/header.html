@@ -23,11 +23,11 @@
 
         {% if post.type == "internal" %}
       
-        <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>' }}" class="action">{{ post.title }}</a>
+        <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>'  | remove: '<em>' | remove: '</em>' }}" class="action">{{ post.title }}</a>
 
         {% else %}
 
-        <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>' }}" class="action" target="_blank">{{ post.title }}</a>
+        <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>' | remove: '<em>' | remove: '</em>' }}" class="action" target="_blank">{{ post.title }}</a>
 
         {% endif %}
       

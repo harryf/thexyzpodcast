@@ -7,7 +7,7 @@ title: Where to Find The XYZ Podcast
   {% assign links = site.posts | where:'group', 'link' %}
   {% for post in links %}
 
-  <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>' }}" class="button" target="_blank">{{ post.title }}</a>
+  <a href="{{ post.excerpt | remove: '<p>' | remove: '</p>' | remove: '<em>' | remove: '</em>' }}" class="button" target="_blank">{{ post.title }}</a>
 
   {% endfor %}
 

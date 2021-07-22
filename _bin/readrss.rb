@@ -210,7 +210,7 @@ sitemap: false
 {{ site.url }}/episodes/#{filename}
                 
 LATEST
-                File.open(File.join(post_dir,"2021-03-16-LATEST.md"),"w") {
+                File.open(File.join(post_dir,"2021-03-16-LATEST.html"),"w") {
                     |file| file.write(latest)
                 }
                 first = false
