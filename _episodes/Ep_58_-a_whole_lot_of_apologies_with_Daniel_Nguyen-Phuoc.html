@@ -1,0 +1,57 @@
+---
+layout: episodes
+date: 2021-08-10 09:52
+title: Ep. 58 -a whole lot of apologies with Daniel Nguyen-Phuoc
+categories: guest comedy
+image: https://pbcdn1.podbean.com/imglogo/ep-logo/pbblog8542624/Daniel.jpeg
+link: https://thexyzpod.podbean.com/e/ep-58-a-whole-lot-of-apologies-with-daniel-nguyen-phuoc/
+spotify: https://open.spotify.com/episode/7M9lgLvLkMmQ7Y76X2wwnu?si=f446855b53944af3
+apple: https://podcasts.apple.com/ch/podcast/ep-58-a-whole-lot-of-apologies-with-daniel-nguyen-phuoc/id1515002956?i=1000531572360&l=en
+youtube: 
+---
+<div class="episodes>
+    <span class="description"><p>This week the guys are visited by Daniel Nguyen-Phuoc (follow on IG: @dbnguyen85 ) and discuss all things expat living and exploring Switzerland. Dan has been doing Stand-up all around the world and brings a lot of insight to cultural differences. And they go through some organisational mishap for a show that was supposed to happen...</p>
+
+<p>Check out Dan's Podcast - Third Culture Talks - on Spotify or wherever you get your podcasts.</p>
+
+<p> </p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
