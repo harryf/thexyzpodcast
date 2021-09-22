@@ -1,0 +1,55 @@
+---
+layout: episodes
+date: 2021-09-22 06:00
+title: Ep. 64 - Who are the Originals? (with Jack Roberts)
+categories: guest comedy
+image: https://pbcdn1.podbean.com/imglogo/ep-logo/pbblog8542624/xyz_jack.jpg
+link: https://thexyzpod.podbean.com/e/ep-64-who-are-the-originals-with-jack-roberts/
+spotify: https://open.spotify.com/episode/4w5gB4CX1l68QZXZ3Wdlgi?si=a52a07a62e10474c
+apple: https://podcasts.apple.com/ch/podcast/ep-64-who-are-the-originals-with-jack-roberts/id1515002956?i=1000536227955&l=en
+youtube: 
+---
+<div class="episodes>
+    <span class="description"><p>This week the boys catch up with comedy buddy Jack Roberts, the sexiest Mancunian comedian living in Switzerland... in his age bracket... that also teaches. Among other things, they discuss the most controversial comedy show of the past two years of English standup in Zürich... The Originals.</p>
+
+<p>Catch Jack performing at shows in an around Zürich and check out his Instagram <a href='https://www.instagram.com/jackschweiz/'>@jackschweiz</a>.</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
