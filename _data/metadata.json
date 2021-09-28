@@ -707,5 +707,15 @@
       "guest",
       "comedy"
     ]
+  },
+  "https://thexyzpod.podbean.com/e/ep-65-the-deep-dive-series-gen-x/": {
+    "title": "Ep. 65 - The Deep Dive Series - Gen X",
+    "spotify": "https://open.spotify.com/episode/3A8oldtHhfBXCABbIDu4KL?si=6bfe5e9a217e455a",
+    "apple": "https://podcasts.apple.com/ch/podcast/ep-65-the-deep-dive-series-gen-x/id1515002956?i=1000536833466&l=en",
+    "youtube": "",
+    "extra": "",
+    "categories": [
+      "oversharing"
+    ]
   }
 }

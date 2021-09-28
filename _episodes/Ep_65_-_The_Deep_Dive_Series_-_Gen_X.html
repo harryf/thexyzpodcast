@@ -1,0 +1,53 @@
+---
+layout: episodes
+date: 2021-09-28 07:15
+title: Ep. 65 - The Deep Dive Series - Gen X
+categories: oversharing
+image: https://pbcdn1.podbean.com/imglogo/ep-logo/pbblog8542624/harryfcks9hjxg.png
+link: https://thexyzpod.podbean.com/e/ep-65-the-deep-dive-series-gen-x/
+spotify: https://open.spotify.com/episode/3A8oldtHhfBXCABbIDu4KL?si=6bfe5e9a217e455a
+apple: https://podcasts.apple.com/ch/podcast/ep-65-the-deep-dive-series-gen-x/id1515002956?i=1000536833466&l=en
+youtube: 
+---
+<div class="episodes>
+    <span class="description"><p>Back in <a href='https://thexyzpod.com/episodes/Ep_42_-_The_Deep_Dive_Series_-_Gen_Y.html'>Episode 42</a> we took a deep dive into the life of <a href='https://www.instagram.com/chrisbraekercomedy/'>Mr. Christian Braeker</a>. This week the boys dive into a deeper, darker and somewhat more moist place... <a href='https://www.instagram.com/harryf.cks/'>Mr Harry Fücks</a> and manage to come out mostly unscathed.</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
