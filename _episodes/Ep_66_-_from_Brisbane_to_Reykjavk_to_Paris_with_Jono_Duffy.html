@@ -1,0 +1,53 @@
+---
+layout: episodes
+date: 2021-10-05 04:20
+title: Ep. 66 - from Brisbane to Reykjavík to Paris (with Jono Duffy)
+categories: guest comedy
+image: https://mcdn.podbean.com/mf/web/stk625/28F9F5C3-AB00-4259-A5E7-65F6CAF5EA04.jpeg
+link: https://thexyzpod.podbean.com/e/ep-66-from-brisbane-to-reykjavik-to-paris-with-jono-duffy/
+spotify: https://open.spotify.com/episode/06DU3i2gb3UtFCHErm9H8u?si=dd01d162338e4aaf
+apple: https://podcasts.apple.com/ch/podcast/ep-66-from-brisbane-to-reykjav%C3%ADk-to-paris-with-jono-duffy/id1515002956?i=1000537563588&l=en
+youtube: 
+---
+<div class="episodes>
+    <span class="description"><p>This week the boys are talking to absolute comedy legend Jono Duffy (IG: @jonoduffy). They talk hair, therapy and Harry has to leave early. Get ready for a loose conversation.</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
