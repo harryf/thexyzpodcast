@@ -1,0 +1,57 @@
+---
+layout: episodes
+date: 2021-10-21 10:52
+title: Ep. 68 - Teddy is here (with Teddy Hall)
+categories: guest comedy
+image: https://pbcdn1.podbean.com/imglogo/ep-logo/pbblog8542624/WhatsApp_Image_2021-10-19_at_09282871yut.jpeg
+link: https://thexyzpod.podbean.com/e/ep-69-teddy-is-here-with-teddy-hall/
+spotify: https://open.spotify.com/episode/1FEgvYqOsW3eQrCGyHsnUP?si=136c426048184ed3
+apple: https://podcasts.apple.com/ch/podcast/ep-68-teddy-is-here-with-teddy-hall/id1515002956?i=1000539265059&l=en
+youtube: 
+---
+<div class="episodes>
+    <span class="description"><p>finally, we had Teddy on the show! this one has been a long time coming. the boys talk about bombing in front of an audience and other explosive stuff.</p>
+
+<p>sorry for the delay. it's totally Christian's fault. </p>
+
+<p>Follow Teddy on IG (<a href='https://instagram.com/teddyhallcomedy'>@teddyhallcomedy</a>)</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
