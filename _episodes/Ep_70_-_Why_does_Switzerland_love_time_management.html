@@ -1,0 +1,53 @@
+---
+layout: episodes
+date: 2021-11-02 06:00
+title: Ep. 70 - Why does Switzerland love time management?
+categories: switzerland
+image: https://pbcdn1.podbean.com/imglogo/ep-logo/pbblog8542624/XYZ_GuestArtwork.jpg
+link: https://thexyzpod.podbean.com/e/ep-70-why-does-switzerland-love-time-management/
+spotify: https://open.spotify.com/episode/0PgC5FLu63oTDSm6hRX09Q?si=FKi_JgqGQ0qrP5icUihNqQ
+apple: https://podcasts.apple.com/ch/podcast/ep-70-why-does-switzerland-love-time-management/id1515002956?i=1000540466941&l=en
+youtube: https://youtu.be/qVN0KtVsJ7U
+---
+<div class="episodes>
+    <span class="description"><p>This week the boys attempt to understand the Swiss love of clocks and time management. Instead they get side-tracked by trams, spacesuits and the correct way to wash off man-fluids.</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
