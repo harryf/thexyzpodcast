@@ -8,8 +8,8 @@
                 <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
             </a>
         {% elsif site.ticket == true %}
-            <a class="link" href="{{ site.ticket-url }}">
-                <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
+            <a class="link" href="{{ site.ticket-url }}" target="_blank">
+                <img class="selfie" alt="Get Your Tickets" src="{{ site.url }}/{{ site.ticket-image }}" />
             </a>
         {% elsif page.url == "/" %}
             {% for post in links %}
