@@ -1,0 +1,53 @@
+---
+layout: episodes
+date: 2021-11-23 06:00
+title: Ep. 72 - The Twin Towers of London
+categories: 
+image: https://pbcdn1.podbean.com/imglogo/ep-logo/pbblog8542624/Ep_72_Artwork.jpg
+link: https://thexyzpod.podbean.com/e/ep-72-the-twin-towers-of-london/
+spotify: https://open.spotify.com/episode/4gZc99bBv8THTXWAaIaNeX?si=9cee49e8ee7f47b4
+apple: https://podcasts.apple.com/ch/podcast/ep-72-the-twin-towers-of-london/id1515002956?i=1000542788754&l=en
+youtube: 
+---
+<div class="episodes>
+    <span class="description"><p>Christian tells the sordid tales from his long weekend in London... also - in case you forgot - there's the XYZ Live Show on the 3rd December. Grab your tickets <a href='https://eventfrog.ch/de/p/theater-buehne/comedy-kabarett/the-xyz-podcast-live-show-6864850434197491785.html'>here</a> on over on <a href='https://thexyzpod.com'>thexyzpod.com</a>.</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
