@@ -1,0 +1,56 @@
+---
+layout: episodes
+date: 2021-11-30 06:00
+title: Ep. 73 - The Art of the Comedy Roast (with Chris Darwa)
+categories: guest comedy
+image: https://pbcdn1.podbean.com/imglogo/ep-logo/pbblog8542624/XYZ_GuestArtwork_Chris_Darwa.jpg
+link: https://thexyzpod.podbean.com/e/ep-73-the-art-of-the-comedy-roast-with-chris-darwa/
+spotify: https://open.spotify.com/episode/05MaNhbRW5mAk7hku8X0SR?si=a9a51c76df634b61
+apple: https://podcasts.apple.com/ch/podcast/ep-73-the-art-of-the-comedy-roast-with-chris-darwa/id1515002956?i=1000543464258&l=en
+youtube: 
+---
+<div class="episodes>
+    <span class="description"><p>This week the boys catch up with Chris Darwa (<a href='https://www.instagram.com/chrisdarwa/'>@chrisdarwa</a>) - well known Australian comedian on the English Speaking Stand-up Comedy Circuit in Switzerland - to learn about the Art of the Comedy Roast... ending in an epic roast of The XYZ Podcast.</p>
+
+<p>Catch up with Chris in Zürich on his own show <a href='https://www.facebook.com/downundercomedy.ch'>Down Under Comedy</a> or just go to one of the many <a href='https://thexyzpod.com/english_standup_comedy_in_switzerland/'>English Speaking shows</a> and you can't miss him.</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    <p>Chris serves The XYZ Podcast with an epic roast</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/BKK8WTR8Ek4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+

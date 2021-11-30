@@ -798,7 +798,18 @@
     "youtube": "",
     "extra": "",
     "categories": [
-      
+
+    ]
+  },
+  "https://thexyzpod.podbean.com/e/ep-73-the-art-of-the-comedy-roast-with-chris-darwa/": {
+    "title": "Ep. 73 - The Art of the Comedy Roast (with Chris Darwa)",
+    "spotify": "https://open.spotify.com/episode/05MaNhbRW5mAk7hku8X0SR?si=a9a51c76df634b61",
+    "apple": "https://podcasts.apple.com/ch/podcast/ep-73-the-art-of-the-comedy-roast-with-chris-darwa/id1515002956?i=1000543464258&l=en",
+    "youtube": "",
+    "extra": "ep_73_-_comedy_roast_chris_darwa.html",
+    "categories": [
+      "guest",
+      "comedy"
     ]
   }
 }
