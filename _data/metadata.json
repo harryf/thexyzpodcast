@@ -811,5 +811,15 @@
       "guest",
       "comedy"
     ]
+  },
+  "https://thexyzpod.podbean.com/e/ep-74-live-show-december-2021/": {
+    "title": "Ep. 74 - Live Show December 2021",
+    "spotify": "https://open.spotify.com/episode/7fegRhQzTqKIWN9G6pWocB?si=2de2ed01742c4204",
+    "apple": "https://podcasts.apple.com/ch/podcast/ep-74-live-show-december-2021/id1515002956?i=1000544903066&l=en",
+    "youtube": "",
+    "extra": "",
+    "categories": [
+      "comedy"
+    ]
   }
 }

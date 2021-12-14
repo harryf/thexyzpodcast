@@ -15,7 +15,8 @@
             {% for post in links %}
             {% if post.title == "Latest Episode" %}
             <a class="link" href="{{ post.excerpt | remove: '<p>' | remove: '</p>'  | remove: '<em>' | remove: '</em>' }}">
-                <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" />
+                <img class="selfie" alt="{{ post.title }}" src="{{ post.image }}" />
+                <!-- <img class="selfie" alt="{{ site.name }}" src="{% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %}" /> -->
             </a>
             {% endif %}
             {% endfor %}
