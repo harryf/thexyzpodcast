@@ -1,0 +1,55 @@
+---
+layout: episodes
+date: 2021-12-21 15:51
+title: Ep. 75 - Would the real Gen Z please stand up? (with Ben)
+categories: guest
+image: https://pbcdn1.podbean.com/imglogo/ep-logo/pbblog8542624/XYZ_GuestBen.jpg
+link: https://thexyzpod.podbean.com/e/ep-75-would-the-real-gen-z-please-stand-up-with-ben/
+spotify: https://open.spotify.com/episode/1gmlwaKcw0biPNuQ4b9nZV?si=udGdiQvZTneQa16xp_yWzQ
+apple: https://podcasts.apple.com/ch/podcast/ep-75-would-the-real-gen-z-please-stand-up-with-ben/id1515002956?i=1000545645477&l=en
+youtube: 
+---
+<div class="episodes>
+    <span class="description"><p>For the end of this season of The XYZ Podcast, the boys get together with Ben... Harry's son and star of <a href='https://thexyzpod.com/episodes/Ep_74_-_Live_Show_December_2021.html'>the live show</a> to find out what it's like to be a real Gen Z.</p>
+
+<p>Harry will probably deeply regret this episode once he gets time to reflect on his poor parental decisions...</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
