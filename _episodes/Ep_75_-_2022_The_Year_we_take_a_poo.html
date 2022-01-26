@@ -1,0 +1,53 @@
+---
+layout: episodes
+date: 2022-01-18 08:11
+title: Ep. 75 - 2022 The Year we take a poo
+categories: 
+image: https://pbcdn1.podbean.com/imglogo/image-logo/8542624/XYZ_Logo_ayvvb.jpeg
+link: https://thexyzpod.podbean.com/e/ep-75-2022-the-year-we-take-a-poo/
+spotify: https://open.spotify.com/episode/2t61D3pF5jTy6IC2UtYDoL?si=7b6d78ff1f4d474a
+apple: https://podcasts.apple.com/ch/podcast/ep-75-2022-the-year-we-take-a-poo/id1515002956?i=1000548204228&l=en
+youtube: 
+---
+<div class="episodes>
+    <span class="description"><p>We are finally back after a long x-mas break which apparently was not all great. Plans for 2022, hopes, dreams and predictions - this ep is packed with even more XYZ. Welcome back to season 3. we are giving it another go :-) <a href='https://thexyzpod.com'>thexyzpod.com</a>.</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
