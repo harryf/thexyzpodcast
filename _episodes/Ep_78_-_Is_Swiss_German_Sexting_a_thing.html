@@ -1,0 +1,53 @@
+---
+layout: episodes
+date: 2022-02-08 06:00
+title: Ep. 78 - Is Swiss German Sexting a thing?
+categories: switzerland dating
+image: https://pbcdn1.podbean.com/imglogo/image-logo/8542624/XYZ_Logo_ayvvb.jpeg
+link: https://thexyzpod.podbean.com/e/ep-78-is-swiss-german-sexting-a-thing/
+spotify: https://open.spotify.com/episode/7giRgo9wWfXVwReAbOS8YK?si=df470c5f45054fce
+apple: https://podcasts.apple.com/ch/podcast/ep-78-is-swiss-german-sexting-a-thing/id1515002956?i=1000550397787&l=en
+youtube: 
+---
+<div class="episodes>
+    <span class="description"><p>This week the boys get back together to ask the important questions like "Is Swiss German Sexting a thing?", "How is Bill Clinton doing a Masterclass?", "Why did Clubhouse die?" as well as making a comeback into the ASMR scene...</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
