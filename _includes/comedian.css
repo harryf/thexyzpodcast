@@ -526,7 +526,7 @@ blockquote {
   -moz-transform: rotate(-3deg);
 }
 
-.container:before {
+/* .container:before {
   content: "“";
   font-size: 9em;
   position: absolute;
@@ -541,7 +541,7 @@ blockquote {
   right: -80px;
   top: 150px;
   color: #666;
-}
+} */
 
   blockquote:first-line {
       font: 1.55em "Sketch Block";
