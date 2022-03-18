@@ -1,0 +1,596 @@
+
+/* General Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    font: normal 16px sans-serif;
+    color: #555;
+  }
+
+  body {
+    background: #050507;
+    color: #fff;
+  }
+  
+  nav,
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    opacity: 0.75;
+    color: #fff;
+  }
+  
+  a:hover {
+    opacity: 1;
+  }
+  
+  a.btn {
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: #3f51b5;
+    opacity: 1;
+  }
+  
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 125px 0;
+  }
+  
+  section:not(.hero):nth-child(even) {
+    background-color: #333;
+  }
+  
+  
+  .grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  hr {
+    width: 250px;
+    height: 2px;
+    background-color: #3f51b5;
+    border: 0;
+    margin-bottom: 80px;
+  }
+  
+  section h3.title {
+    text-transform: capitalize;
+    font: bold 32px "Open Sans", sans-serif;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  section p {
+    line-height: 2;
+    margin-bottom: 30px;
+    text-align: center;
+    font-size: 22px;
+  }
+  
+  @media (max-width: 800px) {
+    section {
+      padding: 50px 20px;
+    }
+  
+    section p {
+      font-size: 16px;
+    }
+  
+    section h3.title {
+      font-size: 25px;
+    }
+  
+    hr {
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Header Styles */
+  
+  header {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+    width: 80%;
+    animation: 1s fadein 0.5s forwards;
+    opacity: 0;
+    color: #fff;
+  }
+  
+  @keyframes fadein {
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  header h2 {
+    font-family: "Museo 700", sans-serif;
+    font-size: 2rem;
+  }
+
+  .icon {
+    margin-bottom: 25px;
+    border-radius: 25%;
+    transition: all .2s;
+    opacity: 1;
+  }
+
+  .icon:hover {
+    box-shadow: 0 0px 4px 0 rgba(0,0,0,0.18), 0 0px 12px 0 rgba(0,0,0,0.15);
+    opacity: 0.5;
+  }
+
+  .icon-large {
+    width: 128px;
+  }
+
+  .icon-small {
+    width: 64px;
+  }
+  
+  header nav {
+    display: flex;
+    gap: 10px;
+  }
+  
+  header nav li {
+    font-size: 1.5rem;
+  }
+  
+  nav li:nth-child(2) {
+    margin: 0 15px;
+  }
+  
+  @media (max-width: 800px) {
+    header {
+      padding: 20px 50px;
+      flex-direction: column;
+    }
+    header h2 {
+      margin-bottom: 15px;
+    }
+  }
+  
+  /* Hero Styles */
+  
+  .hero {
+    position: relative;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    color: #fff;
+  }
+  
+  .hero .background-image {
+    position: absolute;
+    background-image: url("/assets/images/harry_fucks/header.jpg");
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-color: #80a3db;
+  }
+  
+  .hero h1 {
+    font: bold 60px "CallunaRegular", sans-serif;
+    margin-bottom: 15px;
+  }
+  
+  .hero h3 {
+    font: normal 28px "CallunaRegular", sans-serif;
+    margin-bottom: 40px;
+  }
+  
+  .hero a.btn {
+    padding: 20px 46px;
+  }
+  
+  .hero-content-area {
+    opacity: 0;
+    margin-top: 100px;
+    animation: 1s slidefade 1s forwards;
+  }
+  
+  @keyframes slidefade {
+    100% {
+      opacity: 1;
+      margin: 0;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .hero {
+      min-height: 600px;
+    }
+    .hero h1 {
+      font-size: 48px;
+    }
+    .hero h3 {
+      font-size: 24px;
+    }
+    .hero a.btn {
+      padding: 15px 40px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .hero h1 {
+      font-size: 30px;
+    }
+    .hero h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+    .hero a.btn {
+      padding: 15px;
+      font-size: 10px;
+    }
+    .hero h2 {
+      font-size: 18px;
+    }
+    .hero nav li {
+      font-size: 15px;
+    }
+  }
+  
+  /* comedian */
+  
+  .comedian .title, 
+  .comedian p, 
+  .comedian .grid {
+    max-width: 80%;
+  }
+  
+  .comedian p {
+    width: 1800px;
+  }
+
+  .comedian p a {
+    color: gray;
+  }
+  
+  .comedian .grid img {
+    padding: 20px;
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    transition: 0.5s all ease;
+    height: 30vh;
+    filter: grayscale(50%)
+  }
+  
+  .comedian .grid img:hover {
+    transform: scale(1.02);
+    transition: 0.5s all ease;
+    filter: none;
+  }
+  
+  .comedian .grid img.small {
+    width: 27%;
+    height: 30vh;
+    flex-basis: 30%;
+  }
+  
+  .comedian .grid img.large {
+    width: 67%;
+    height: 30vh;
+    flex-basis: 70%;
+  }
+  
+  @media (max-width: 1800px) {
+    .comedian .grid img.small,
+    .comedian .grid img.large {
+      flex-basis: 50%;
+      width: 45%;
+      height: 30vh;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .comedian .grid img.small,
+    .comedian .grid img.large {
+      flex-basis: 100%;
+      width: 300px;
+      height: 250px;
+    }
+  }
+  
+  /* Packages Section */
+  
+  .packages .title,
+  .packages li,
+  #packagepara,
+  .packages .grid {
+    max-width: 80%;
+  }
+  
+  .packages .grid li {
+    padding: 40px;
+    flex-basis: 25%;
+    text-align: center;
+  }
+  
+  .packages .grid li i {
+    color: #8c9eff;
+  }
+  
+  .packages .grid li h4 {
+    font-size: 30px;
+    margin: 25px 0;
+  }
+  
+  @media (max-width: 1800px) {
+    .packages .grid li {
+      flex-basis: 50%;
+      padding: 20px;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .packages .grid li {
+      flex-basis: 100%;
+      padding: 20px;
+      max-width: 100%;
+    }
+    .packages .grid li h4 {
+      font-size: 22px;
+    }
+  }
+  
+  /* Testimonials Section */
+  
+  .testimonials {
+    font-weight: 300;
+    line-height: 1.5;
+  }
+  
+  .testimonials .title,
+  .testimonials .author,
+  .testimonials .quote {
+    max-width: 80%;
+    width: 1200px;
+  }
+  
+  @media (max-width: 800px) {
+    .testimonials .quote {
+      font-size: 18px;
+      margin: 15px 0;
+    }
+    .testimonials .author {
+      font-size: 14px;
+    }
+  }
+  
+  /* Contact Section */
+  
+  .contact p {
+    width: 80%;
+    max-width: 1200px;
+  }
+  
+  .contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 800px;
+    max-width: 80%;
+  }
+  
+  .contact form .btn {
+    padding: 18px 42px;
+    width: 30%;
+  }
+  
+  .contact form input {
+    padding: 15px;
+    margin: 15px 0 20px 0;
+    width: 50%;
+    font-size: 18px;
+    color: #555;
+  }
+  
+  @media (max-width: 1100px) {
+    .contact form .btn {
+      padding: 9px;
+      width: 150px;
+      font-size: 12px
+    }
+  
+    .contact form input {
+      padding: 9px;
+      width: 250px;
+    }
+  }
+  
+  /* Footer Section */
+  
+  footer {
+    background-color: #607d8b;
+    color: #fff;
+  }
+  
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 80%;
+    padding: 20px 0;
+  }
+  
+  footer ul {
+    display: flex;
+    justify-content: flex-end;
+    flex-basis: 540px;
+  }
+  
+  footer ul li {
+    margin-right: 16px;
+  }
+  
+  footer p {
+    flex-basis: 540px;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    opacity: 0.6;
+  }
+  
+  footer p:nth-child(1) {
+    text-align: left;
+  }
+  
+  @media (max-width: 1100px) {
+    .footer-container {
+      flex-direction: column;
+    }
+    footer p {
+      text-align: center;
+      flex-basis: 0;
+      margin-bottom: 20px;
+      font-size: 12px;
+    }
+    footer ul {
+      flex-basis: auto;
+      margin: 0 8px;
+    }
+  }
+
+  @font-face {
+    font-family: 'Sketch Block';
+    src: url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.eot');
+    src: url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.woff') format('woff'),
+         url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.ttf') format('truetype'),
+         url('http://tangledindesign.com/codepen/fonts/sketch_block-webfont.svg#SketchBlockBold') format('svg');
+}
+
+@font-face {
+    font-family: 'Museo 700';
+    src: url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.eot');
+    src: url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.woff') format('woff'),
+         url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.ttf') format('truetype'),
+         url('http://tangledindesign.com/codepen/fonts/Museo700-Regular-webfont.svg#SketchBlockBold') format('svg');
+}
+
+@font-face {
+    font-family: 'CallunaRegular';
+    src: url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.eot');
+    src: url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.woff') format('woff'),
+         url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.ttf') format('truetype'),
+         url('http://tangledindesign.com/codepen/fonts/Calluna-Regular-webfont.svg#CallunaRegular') format('svg');
+}
+
+/** Blockquote part **/
+  .container {
+      width: 590px;
+      margin: 140px auto;
+      position: relative;
+  }
+
+  blockquote {
+      width: 565px;
+      font: 2.65em CallunaRegular;
+      letter-spacing: .075em;
+      float: left;
+      padding: 45px 0 30px 25px;
+      margin: 0;
+      border-top: 2px dotted #858585;
+      border-bottom: 2px dotted #858585;
+      -webkit-transform: rotate(-3deg);
+      -moz-transform: rotate(-3deg);
+  }
+
+  .container:before {
+      content: "“";
+      font-size: 13em;
+      position: absolute;
+      left: -100px;
+      color: #666;
+  }
+
+  .container:after {
+      content: "”";
+      font-size: 13em;
+      position: absolute;
+      right: -100px;
+      top: 150px;
+      color: #666;
+  }
+
+  blockquote:first-line {
+      font: 1.85em "Sketch Block";
+      color: red;
+  }
+
+  blockquote:first-letter {
+      font-size: 2.9em;
+      text-transform: lowercase;
+      float: left;
+      line-height: .52em;
+      margin-right: -18px;
+      position: relative;
+      z-index: 1;
+  }
+
+  blockquote strong:first-child {
+      margin-left: 8px;
+      letter-spacing: 0;
+  }
+
+  blockquote strong:last-child {
+      font: 2em "Museo 700";
+      text-transform: uppercase;
+      letter-spacing: 0;
+  }
+
+  blockquote em {
+      border-bottom: 2px dotted #858585;
+    padding-left: 5px;
+  }
+
+  blockquote + b {
+      float: right;
+      margin-top: 10px;
+      font: 1.6em CallunaRegular;
+      letter-spacing: .15em;
+  }
+
+  blockquote + b:first-letter {
+      color: red;
+      font-size: 1.3em;
+      font-style: italic;
+      letter-spacing: .25em;
+  }
+
+  @-moz-document url-prefix() { 
+
+      blockquote:first-letter {
+          margin-top: -29px;
+      }
+
+  }
