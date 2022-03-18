@@ -15,6 +15,7 @@
   body {
     background: #050507;
     color: #fff;
+    overflow-x: hidden;
   }
   
   nav,
@@ -506,53 +507,53 @@
 }
 
 /** Blockquote part **/
-  .container {
-      width: 590px;
-      margin: 140px auto;
-      position: relative;
-  }
+.container {
+  width: 390px;
+  margin: 140px auto;
+  position: relative;
+}
 
-  blockquote {
-      width: 565px;
-      font: 2.65em CallunaRegular;
-      letter-spacing: .075em;
-      float: left;
-      padding: 45px 0 30px 25px;
-      margin: 0;
-      border-top: 2px dotted #858585;
-      border-bottom: 2px dotted #858585;
-      -webkit-transform: rotate(-3deg);
-      -moz-transform: rotate(-3deg);
-  }
+blockquote {
+  width: 365px;
+  font: 1.65em CallunaRegular;
+  letter-spacing: .075em;
+  float: left;
+  padding: 45px 0 30px 25px;
+  margin: 0;
+  border-top: 2px dotted #858585;
+  border-bottom: 2px dotted #858585;
+  -webkit-transform: rotate(-3deg);
+  -moz-transform: rotate(-3deg);
+}
 
-  .container:before {
-      content: "“";
-      font-size: 13em;
-      position: absolute;
-      left: -100px;
-      color: #666;
-  }
+.container:before {
+  content: "“";
+  font-size: 9em;
+  position: absolute;
+  left: -80px;
+  color: #666;
+}
 
-  .container:after {
-      content: "”";
-      font-size: 13em;
-      position: absolute;
-      right: -100px;
-      top: 150px;
-      color: #666;
-  }
+.container:after {
+  content: "”";
+  font-size: 9em;
+  position: absolute;
+  right: -80px;
+  top: 150px;
+  color: #666;
+}
 
   blockquote:first-line {
-      font: 1.85em "Sketch Block";
-      color: red;
+      font: 1.55em "Sketch Block";
+      color: #fff79e;
   }
 
   blockquote:first-letter {
-      font-size: 2.9em;
+      font-size: 1.9em;
       text-transform: lowercase;
       float: left;
       line-height: .52em;
-      margin-right: -18px;
+      margin-right: -10px;
       position: relative;
       z-index: 1;
   }
@@ -563,7 +564,7 @@
   }
 
   blockquote strong:last-child {
-      font: 2em "Museo 700";
+      font: 1.6em "Museo 700";
       text-transform: uppercase;
       letter-spacing: 0;
   }
@@ -581,7 +582,7 @@
   }
 
   blockquote + b:first-letter {
-      color: red;
+      color: #fff79e;
       font-size: 1.3em;
       font-style: italic;
       letter-spacing: .25em;
