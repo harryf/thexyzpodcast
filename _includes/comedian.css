@@ -147,6 +147,15 @@
   .icon-small {
     width: 64px;
   }
+
+  @media (max-width: 800px) {
+    .icon-large {
+      width: 64px;
+    }
+    .icon-small {
+      width: 32px;
+    }
+  }
   
   header nav {
     display: flex;
@@ -267,7 +276,7 @@
   }
 
   .comedian p a {
-    color: gray;
+    color: #fff79e;
   }
 
   .comedian .grid img {
@@ -286,21 +295,21 @@
     filter: none;
   }
   
-  .comedian .grid img.small {
+  .comedian .grid img.portrait {
     width: 27%;
     height: 30vh;
     flex-basis: 30%;
   }
   
-  .comedian .grid img.large {
+  .comedian .grid img.landscape {
     width: 67%;
     height: 30vh;
     flex-basis: 70%;
   }
   
   @media (max-width: 1800px) {
-    .comedian .grid img.small,
-    .comedian .grid img.large {
+    .comedian .grid img.portrait,
+    .comedian .grid img.landscape {
       flex-basis: 50%;
       width: 45%;
       height: 30vh;
@@ -308,8 +317,8 @@
   }
   
   @media (max-width: 900px) {
-    .comedian .grid img.small,
-    .comedian .grid img.large {
+    .comedian .grid img.portrait,
+    .comedian .grid img.landscape {
       flex-basis: 100%;
       width: 300px;
       height: 250px;
@@ -571,7 +580,7 @@ blockquote {
 
   blockquote em {
       border-bottom: 2px dotted #858585;
-    padding-left: 5px;
+      padding-left: 5px;
   }
 
   blockquote + b {
