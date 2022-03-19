@@ -26,7 +26,7 @@
   a {
     text-decoration: none;
     opacity: 0.75;
-    color: #fff;
+    color: #fff79e;
   }
   
   a:hover {
@@ -200,7 +200,15 @@
     height: 100%;
     background-size: cover;
     background-color: #80a3db;
+    /* background-position: center center; */
   }
+
+  @media (max-width: 800px) {
+    .hero .background-image {
+      background-image: url("/assets/images/harry_fucks/header_mobile.jpg");
+    }
+  }
+
   
   .hero h1 {
     font: bold 60px "CallunaRegular", sans-serif;
@@ -220,6 +228,17 @@
     opacity: 0;
     margin-top: 100px;
     animation: 1s slidefade 1s forwards;
+  }
+
+  .hero-content-area p {
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: #fff79e;
+    border-radius: 50%;
+    opacity: 0.8;
+    background-color: #333;
   }
   
   @keyframes slidefade {
@@ -286,8 +305,8 @@
     background-size: cover;
     background-position: center;
     transition: 0.5s all ease;
-    height: 30vh;
-    filter: grayscale(50%)
+    filter: saturate(50%);
+    object-fit: cover;
   }
   
   .comedian .grid img:hover {
@@ -297,18 +316,32 @@
   }
   
   .comedian .grid img.portrait {
-    width: 27%;
-    height: 30vh;
+    /* width: 27%; */
+    /* height: 30vh; */
+    /* width: 300px; */
+    /* width: 100%; */
     flex-basis: 30%;
+    height: 600px;
+    width: 338px;
+  }
+
+  .comedian .grid img.square {
+    flex-basis: 50%;
+    width: 1067px;
+    height: 600px;
   }
   
   .comedian .grid img.landscape {
-    width: 67%;
-    height: 30vh;
+    /* width: 67%; */
+    /* height: 30vh; */
+    /* width: 100%; */
+    /* height: 250px; */
     flex-basis: 70%;
+    width: 600px;
+    height: 600px;
   }
   
-  @media (max-width: 1800px) {
+  /* @media (max-width: 1800px) {
     .comedian .grid img.portrait,
     .comedian .grid img.landscape {
       flex-basis: 50%;
@@ -321,11 +354,24 @@
     .comedian .grid img.portrait,
     .comedian .grid img.landscape {
       flex-basis: 100%;
-      width: 300px;
+      width: 100%;
       height: 250px;
     }
-  }
+  } */
   
+  @media (max-width: 800px) {
+    .comedian .grid img.portrait,
+    .comedian .grid img.square {
+      flex-basis: 100%;
+      width: 300px;
+      height: 100%;
+    }
+    .comedian .grid img.landscape {
+      flex-basis: 100%;
+      width: 100%;
+      height: 300px;
+    }
+  }
   /* Packages Section */
   
   .packages .title,
@@ -518,14 +564,21 @@
 
 /** Blockquote part **/
 .container {
-  width: 390px;
-  margin: 140px auto;
+  width: 590px;
+  margin: 100px auto;
   position: relative;
 }
 
+@media (max-width: 800px) {
+  .container {
+    width: 295px;
+    margin: 50px auto;
+  }
+}
+
 blockquote {
-  width: 365px;
-  font: 1.65em CallunaRegular;
+  width: 565px;
+  font: 2.65em CallunaRegular;
   letter-spacing: .075em;
   float: left;
   padding: 45px 0 30px 25px;
@@ -536,72 +589,113 @@ blockquote {
   -moz-transform: rotate(-3deg);
 }
 
-/* .container:before {
-  content: "“";
-  font-size: 9em;
-  position: absolute;
-  left: -80px;
-  color: #666;
+@media (max-width: 800px) {
+  blockquote {
+    width: 283px;
+    font: 1.33em CallunaRegular;
+    letter-spacing: .019em;
+    padding: 23px 0 15px 13px;
+  }
 }
 
-.container:after {
-  content: "”";
-  font-size: 9em;
-  position: absolute;
-  right: -80px;
-  top: 150px;
-  color: #666;
-} */
-
-  blockquote:first-line {
-      font: 1.55em "Sketch Block";
-      color: #fff79e;
+@media (min-width: 800px) {
+  .container:before {
+    content: "“";
+    font-size: 13em;
+    position: absolute;
+    left: -100px;
+    color: #666;
   }
+
+  .container:after {
+    content: "”";
+    font-size: 13em;
+    position: absolute;
+    right: -100px;
+    top: 150px;
+    color: #666;
+  }
+}
+
+blockquote:first-line {
+  font: 1.85em "Sketch Block";
+  color: #fff79e;
+}
+
+blockquote:first-letter {
+  font-size: 2.9em;
+  text-transform: lowercase;
+  float: left;
+  line-height: .52em;
+  margin-right: -18px;
+  position: relative;
+  z-index: 1;
+}
+
+blockquote strong:first-child {
+  margin-left: 8px;
+  letter-spacing: 0;
+}
+
+blockquote strong:last-child {
+  font: 2em "Museo 700";
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+blockquote em {
+  border-bottom: 2px dotted #858585;
+  padding-left: 5px;
+}
+
+blockquote + b {
+  float: right;
+  margin-top: 10px;
+  font: 1.6em CallunaRegular;
+  letter-spacing: .15em;
+}
+
+blockquote + b:first-letter {
+  color: #fff79e;
+  font-size: 1.3em;
+  font-style: italic;
+  letter-spacing: .25em;
+}
+
+@media (max-width: 800px) {
+  blockquote:first-line {
+    font: 0.93em "Sketch Block";
+  }
+  blockquote:first-letter {
+    font-size: 1.5em;
+    line-height: .26em;
+    margin-right: -9px;
+  }
+  blockquote strong:first-child {
+    margin-left: 4px;
+  }
+  blockquote strong:last-child {
+    font: 1em "Museo 700";
+  }
+  blockquote em {
+    border-bottom: 1px dotted #858585;
+    padding-left: 3px;
+  }
+  blockquote + b {
+    margin-top: 5px;
+    font: 0.8em CallunaRegular;
+    letter-spacing: .8em;
+  }
+  blockquote + b:first-letter {
+    font-size: 0.7em;
+    letter-spacing: .13em;
+  }
+}
+
+@-moz-document url-prefix() { 
 
   blockquote:first-letter {
-      font-size: 1.9em;
-      text-transform: lowercase;
-      float: left;
-      line-height: .52em;
-      margin-right: -10px;
-      position: relative;
-      z-index: 1;
+      margin-top: -29px;
   }
 
-  blockquote strong:first-child {
-      margin-left: 8px;
-      letter-spacing: 0;
-  }
-
-  blockquote strong:last-child {
-      font: 1.6em "Museo 700";
-      text-transform: uppercase;
-      letter-spacing: 0;
-  }
-
-  blockquote em {
-      border-bottom: 2px dotted #858585;
-      padding-left: 5px;
-  }
-
-  blockquote + b {
-      float: right;
-      margin-top: 10px;
-      font: 1.6em CallunaRegular;
-      letter-spacing: .15em;
-  }
-
-  blockquote + b:first-letter {
-      color: #fff79e;
-      font-size: 1.3em;
-      font-style: italic;
-      letter-spacing: .25em;
-  }
-
-  @-moz-document url-prefix() { 
-
-      blockquote:first-letter {
-          margin-top: -29px;
-      }
-
-  }
+}
