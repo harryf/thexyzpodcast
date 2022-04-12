@@ -1,0 +1,53 @@
+---
+layout: episodes
+date: 2022-04-12 06:00
+title: Ep. 86 - Whats the deal with TikTok? (with Mike Casa)
+categories: guest comedy
+image: https://pbcdn1.podbean.com/imglogo/ep-logo/pbblog8542624/XYZ_MikeCasa.jpg
+link: https://thexyzpod.podbean.com/e/ep-66-whats-the-deal-with-tiktok-with-mike-casa/
+spotify: https://open.spotify.com/episode/3m508rON1mM4MLZd10UPT9?si=060c5bc038db4598
+apple: https://podcasts.apple.com/ch/podcast/ep-66-whats-the-deal-with-tiktok-with-mike-casa/id1515002956?i=1000557193403&l=en
+youtube: https://youtu.be/w6Fu8eQ5Kr0
+---
+<div class="episodes>
+    <span class="description"><p>This week the boys get together with OG from the English Comedy Scene in Switzerland: Mike Casa ( Instagram: <a href='https://www.instagram.com/mikecasacomedian/'>@mikecasacomedian</a>, TikTok: <a href='https://www.tiktok.com/@mikecasacomedian'>@mikecasacomedian</a> ). In his cute Italian-Swiss accent Mike explains how hes killing it on TikTok with comedy clips.</p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
