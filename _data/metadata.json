@@ -943,5 +943,15 @@
       "guest",
       "comedy"
     ]
+  },
+  "https://thexyzpod.podbean.com/e/ep-87-the-easter-bunny-came-and-went/": {
+    "title": "Ep. 87 - The Easter Bunny Came... and went",
+    "spotify": "https://open.spotify.com/episode/6ehK2yMIjPTXIGZA5QQQ3Q?si=0a26eccf0c404e84",
+    "apple": "https://podcasts.apple.com/ch/podcast/the-xyz-podcast/id1515002956?l=en",
+    "youtube": "https://youtu.be/5lMSIbbMtmQ",
+    "extra": "",
+    "categories": [
+      "deep"
+    ]
   }
 }
