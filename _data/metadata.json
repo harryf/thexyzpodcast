@@ -974,5 +974,15 @@
       "guest",
       "comedy"
     ]
+  },
+  "https://thexyzpod.podbean.com/e/ep-90-whats-the-best-e-scooter/": {
+    "title": "Ep. 90 - Whats the best e-scooter?",
+    "spotify": "https://open.spotify.com/episode/6JPBDDhbGtgQAv6t7O2jpq?si=9b7f8d36e5b942a1",
+    "apple": "https://podcasts.apple.com/ch/podcast/the-xyz-podcast/id1515002956?l=en",
+    "youtube": "https://youtu.be/nypzPSiTn0U",
+    "extra": "",
+    "categories": [
+      "deep"
+    ]
   }
 }
