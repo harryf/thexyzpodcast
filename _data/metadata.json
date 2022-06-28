@@ -1036,5 +1036,25 @@
       "guest",
       "comedy"
     ]
+  },
+  "https://thexyzpod.podbean.com/e/ep-96-did-you-really-listen-to-all-that/": {
+    "title": "Ep. 96 - Podcast aged like Wine?",
+    "spotify": "https://open.spotify.com/episode/1Wm81yDnJv0MKde8CojpuM?si=fdb1e154c4264fef",
+    "apple": "https://podcasts.apple.com/ch/podcast/ep-96-podcast-aged-like-wine/id1515002956?i=1000567205234&l=en",
+    "youtube": "https://youtu.be/IvaWrTgRD10",
+    "extra": "",
+    "categories": [
+
+    ]
+  },
+  "https://thexyzpod.podbean.com/e/ep-97-a-unique-solution-to-wealth-inequality/": {
+    "title": "Ep. 97 - A Unique Solution to Wealth Inequality",
+    "spotify": "https://open.spotify.com/episode/3dLlnjA0yJ12d7la1T9ZLx?si=caa5268ffe6b493d",
+    "apple": "https://podcasts.apple.com/ch/podcast/ep-97-a-unique-solution-to-wealth-inequality/id1515002956?i=1000567970804&l=en",
+    "youtube": "https://youtu.be/wEPwCX8BFA4",
+    "extra": "",
+    "categories": [
+      "deep"
+    ]
   }
 }
