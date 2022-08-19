@@ -11,8 +11,10 @@ end
 
 gem "rexml", ">= 3.2.5"
 gem "kramdown", ">= 2.3.1"
-gem "nokogiri", ">= 1.11.4"
+gem "nokogiri"
 
 gem 'rss'
 gem 'rspotify'
 
+
+gem "webrick", "~> 1.7"
