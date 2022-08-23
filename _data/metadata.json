@@ -1086,5 +1086,15 @@
     "categories": [
       "comedy"
     ]
+  },
+  "https://thexyzpod.podbean.com/e/ep-101-love-and-hate/": {
+    "title": "Ep. 101 - Love and Hate",
+    "spotify": "https://open.spotify.com/episode/0ePwsc90wQjYkh8UMYwX3T?si=fd6a4139829b43dc",
+    "apple": "https://podcasts.apple.com/ch/podcast/the-xyz-podcast/id1515002956?i=1000577094189",
+    "youtube": "https://youtu.be/RtmKwsv-UlQ",
+    "extra": "",
+    "categories": [
+      "deep"
+    ]
   }
 }
