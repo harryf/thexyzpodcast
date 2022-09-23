@@ -1116,5 +1116,16 @@
     "categories": [
       "comedy"
     ]
+  },
+  "https://thexyzpod.podbean.com/e/ep-104-finally-a-real-podcast-with-jiu-jitsu/": {
+    "title": "Ep. 104 - Finally a REAL podcast. With Jiu Jitsu",
+    "spotify": "https://open.spotify.com/episode/1TXslg7hkBJZeGPlP0C1He?si=1e4de06bb01b486e",
+    "apple": "https://podcasts.apple.com/ch/podcast/the-xyz-podcast/id1515002956?i=1000580404828",
+    "youtube": "https://youtu.be/UJdPzC1Cxmo",
+    "extra": "",
+    "categories": [
+      "deep",
+      "guest"
+    ]
   }
 }
