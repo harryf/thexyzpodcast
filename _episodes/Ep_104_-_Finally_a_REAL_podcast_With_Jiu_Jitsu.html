@@ -1,0 +1,53 @@
+---
+layout: episodes
+date: 2022-09-23 10:00
+title: Ep. 104 - Finally a REAL podcast. With Jiu Jitsu
+categories: deep guest
+image: https://pbcdn1.podbean.com/imglogo/ep-logo/pbblog8542624/ep104_realpodcast.jpg
+link: https://thexyzpod.podbean.com/e/ep-104-finally-a-real-podcast-with-jiu-jitsu/
+spotify: https://open.spotify.com/episode/1TXslg7hkBJZeGPlP0C1He?si=1e4de06bb01b486e
+apple: https://podcasts.apple.com/ch/podcast/the-xyz-podcast/id1515002956?i=1000580404828
+youtube: https://youtu.be/UJdPzC1Cxmo
+---
+<div class="episodes>
+    <span class="description"><p>This week the boys get together with Craig, Deans cousins husband from South Africa, massively increasing the testosterone levels on the podcast and leading to talk of what it means to be a man and training Jiu Jitsu. Yes ... finally its a REAL podcast. </p>
+</span>
+
+    {% if page.spotify %}
+    <a href="{{ page.spotify }}" class="button" target="_blank">Listen to Episode on Spotify</a>
+    {% endif %}
+
+    {% if page.apple %}
+    <a href="{{ page.apple }}" class="button" target="_blank">Listen to Episode on Apple Podcasts</a>
+    {% endif %}
+
+    {% if page.youtube %}
+    <a href="{{ page.youtube }}" class="button" target="_blank">Watch Episode on YouTube</a>
+    {% endif %}
+
+    
+
+    <div class="more">
+        <h2>More Episodes</h2>
+        <ul class="episodes">
+            {% assign n = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | size %}
+            {% assign episodes = site.episodes | where_exp: "item", "item.categories contains page.categories[0]" | where_exp:"item",
+            "item.title != page.title" | sample: n | slice:0, 3 %}
+            {% if n == 0 %}
+                {% assign n = site.episodes | where_exp:"item", "item.title != page.title" | size %}
+                {% assign episodes = site.episodes | where_exp:"item","item.title != page.title" | sample: n | slice:0, 3 %}
+            {% endif %}
+            {% for episode in episodes %}
+            <li>
+                <a href="{{ site.url }}{{ episode.url }}">
+                    <img class="selfie" src="{{ episode.image }}"/>
+                    <h2><span>{{ episode.title }}</span></h2>
+                </a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    
+</div>
+
