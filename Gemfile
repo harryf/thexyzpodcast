@@ -7,6 +7,7 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jemoji'
     gem "html-proofer"
+    gem "jekyll-redirect-from"
 end
 
 gem "rexml", ">= 3.2.5"
